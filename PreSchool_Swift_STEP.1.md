@@ -4,24 +4,24 @@
 ### Xcode 설치
 - 스위프트(Swift)란? Apple에서 개발한 iOS용 개발 언어
 - 소프트웨어 개발 도구(Software Development Kit, 이하 SDK)란? 소프트웨어 개발 도구 (Swift: Xcode / Java: Eclipse..)
-- Xcode란? Playground란? Swift용 개발 도구, Xcode > Playground
+- Xcode란? Playground란? Swift용 개발 도구, Xcode의 기능 중 하나가 Playground(간편 개발 도구)
 - 운영체제(Operating System, 이하 OS)란? 메모리 & 비메모리 하드웨어를 제어하는 소프트웨어
 
 ### Hello World 소스 코드 구현 및 실행
-소스 코드는? 
-컴파일이란? 실행이란?
-입력이란? 출력이란?
+소스 코드는? 기계어를 프로그래밍 언어로 작성한 코드
+컴파일이란? 실행이란? 작성한 프로그래밍 언어는 컴파일러를 통해 어셈블리어(기계어)로 번역된다.
+입력이란? 출력이란? Data Input Output
 
 ### github 저장소
-github이란?
-git이란?
-commit이란?
-push란?
+github이란? 개발자들을 위한 원격 저장소, 협업을 가능하게 하여 오픈소스를 만들도록 하는 서비스 플랫폼(서버)
+git이란? 프로그램 등의 소스 코드 관리를 위한 버전 관리 프로그램
+commit이란? 프로그래밍 파일 등에 대한 추가/변경 사항을 저장소에 기록
+push란? 컴퓨터 저장소와 원격 저장소(github) 연결
 
 ### 기타
-위키란?
-markdown의 용도는?
-read.md 파일은?
+위키란? 프로젝트의 매뉴얼 등이 저장 되어 있는 곳
+markdown의 용도는? 문법과 관리가 쉬워 매뉴얼 등 작성에 용의
+read.md 파일은? 해당 프로젝트에 대한 기본적인 매뉴얼이 담기는 곳
 
 ## 2. 2,3단 계산과 출력
 ### 요구사항
