@@ -2,13 +2,13 @@
 ## 1. 개발환경 경험하기
 
 ### Xcode 설치
-스위프트(Swift)란?
-소프트웨어 개발 도구(Software Development Kit, 이하 SDK)란?
-Xcode란? Playground란?
-운영체제(Operating System, 이하 OS)란?
+- 스위프트(Swift)란? Apple에서 개발한 iOS용 개발 언어
+- 소프트웨어 개발 도구(Software Development Kit, 이하 SDK)란? 소프트웨어 개발 도구 (Swift: Xcode / Java: Eclipse..)
+- Xcode란? Playground란? Swift용 개발 도구, Xcode > Playground
+- 운영체제(Operating System, 이하 OS)란? 메모리 & 비메모리 하드웨어를 제어하는 소프트웨어
 
 ### Hello World 소스 코드 구현 및 실행
-소스 코드는?
+소스 코드는? 
 컴파일이란? 실행이란?
 입력이란? 출력이란?
 
