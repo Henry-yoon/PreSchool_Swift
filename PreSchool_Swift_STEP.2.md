@@ -29,6 +29,8 @@ print(centimeter, "cm ==", meter, "m")
 - 길이 단위를 바꿀 때 곱하거나 나누는 값은 바뀌지 않는 값이다. 따라서 상수 값으로 지정해서 프로그램을 구현한다.
 - 문자열로 값 뒤에 붙어있는 단위에 따라 길이를 변환해서 결과를 출력하는 함수를 만든다.
 - 예를 들어 "183cm"처럼 숫자 다음에 cm가 붙어있으면 센티미터 값을 미터로 변환하고 출력한다. "3.14m"처럼 숫자 다음에 m가 붙어있으면 미터 값을 센티미터로 변환하고 출력한다.
+----------------------------------------------------------------------------------
+- 아래 주석 질문!
 ```
 import Foundation
 
@@ -70,12 +72,71 @@ print(centimeterConversion(inputNumber2))
 
 ## 4. 값 입력
 ### 요구사항
+- 사용자가 길이 값을 입력하고 변수에 저장하도록 한다.
+- 길이 단위에 따라 센티미터를 미터로 바꾸는 함수와, 미터를 센티미터로 바꾸는 함수로 나눈다.
+- 사용자가 입력한 문자열에서 값 뒤에 붙어있는 단위에 따라서, 앞서 나눠놓은 길이 변환 함수를 호출하고 결과를 출력한다.
+- 예를 들어 "183cm"처럼 숫자 다음에 cm가 붙어있으면 센티미터 값을 미터로 변환하고 출력한다.
+- "3.14m"처럼 숫자 다음에 m가 붙어있으면 미터 값을 센티미터로 변환하고 출력한다.
+----------------------------------------------------------------------------------
+- playground 에서는 readLine() 사용 할 수 없어서 임의로 data input 
 ```
+import Foundation
 
+//let inputValue = readLine() //can not use in playgorund
+let inputLength = "174cm"
+
+func meterConversion(_ inputData: String) -> String{    // FROM: CM -> TO: M 
+    var convertUnit: String
+    var calProcess: Double
+    var result: String
+
+    convertUnit = inputData.replacingOccurrences(of: "cm", with: "")
+    calProcess = Double(convertUnit)!
+    calProcess = calProcess/100
+
+    result = String(calProcess) + "m"
+
+    return result
+}
+
+func centimeterConversion(_ inputData: String) -> String{    // FROM: M -> TO: CM 
+    var convertUnit: String
+    var calProcess: Double
+    var calProcess2: Int
+    var result: String
+
+    convertUnit = inputData.replacingOccurrences(of: "m", with: "")
+    calProcess = Double(convertUnit)!
+    calProcess2 = Int(calProcess*100)
+
+    result = String(calProcess2) + "cm"
+
+    return result
+}
+
+if(inputLength.contains("cm")){
+    print(meterConversion(inputLength))
+}
+else if(inputLength.contains("m")){
+    print(centimeterConversion(inputLength))
+}
+else{
+    print("길이 단위를 입력해 주세요! (cm/m)")
+}
 ```
 
 ## 5. 인치길이 변환
 ### 요구사항
+- 사용자가 길이 값과 단위를 입력하고 변환할 단위까지도 입력하도록 확장한다.
+- 센티미터를 인치로 바꾸는 함수와 인치를 센티미터로 바꾸는 함수를 추가로 구현한다.
+- 사용자가 입력한 문자열에서 값 뒤에 붙어있는 단위와 그 이후에 변환할 단위를 붙이면 해당하는 변환 함수를 호출해서 변환하도록 구현한다.
+- 예를 들어 "18cm inch"라고 입력하면 센티미터를 인치로 바꾸는 함수를 호출한다.
+- "25.4inch m"라고 입력하면 인치를 센티미터로 바꾸는 함수를 호출하고, 다시 센티미터 단위를 미터로 바꾸는 함수를 호출한다.
+- "0.5m inch"라고 입력하면 미터를 센티미터로 바꾸는 함수를 호출하고, 다시 센티미터 단위를 인치로 바꾸는 함수를 호출한다.
+- "183cm"처럼 숫자 다음에 cm만 붙어있으면 센티미터 값을 미터로 변환하고 출력한다.
+- "3.14m"처럼 숫자 다음에 m가 붙어있으면 미터 값을 센티미터로 변환하고 출력한다.
+- "2.54inch"처럼 숫자 다음에 inch만 붙어있으면 센티미터 값으로 변환하고 출력한다.
+- 만약 지원하지 않는 길이 단위(feet)가 붙어 있을 경우, "지원하지 않는 단위입니다."를 출력하고 다시 입력받도록 한다.
 ```
 
 ```
